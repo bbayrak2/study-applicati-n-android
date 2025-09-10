@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/naw_graph"
+    app:startDestination="@id/girisFragment">
+
+    <fragment
+        android:id="@+id/listeFragment"
+        android:name="com.example.derscalisma.view.ListeFragment"
+        android:label="fragment_liste"
+        tools:layout="@layout/fragment_liste" >
+
+        <action
+            android:id="@+id/action_listeFragment_to_programFragment2"
+            app:destination="@id/programFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/programFragment"
+        android:name="com.example.derscalisma.view.ProgramFragment"
+        android:label="fragment_program"
+        tools:layout="@layout/fragment_program" >
+
+        <!-- ARGUMENTLER BURADA OLMALI -->
+        <argument
+            android:name="bilgi"
+            app:argType="string" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_programFragment_to_listeFragment"
+            app:destination="@id/listeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/girisFragment"
+        android:name="com.example.derscalisma.view.girisFragment"
+        android:label="fragment_giris"
+        tools:layout="@layout/fragment_giris" >
+        <action
+            android:id="@+id/action_girisFragment_to_listeFragment"
+            app:destination="@id/listeFragment" />
+        <action
+            android:id="@+id/action_girisFragment_to_kronometreFragment"
+            app:destination="@id/kronometreFragment" />
+        <action
+            android:id="@+id/action_girisFragment_to_sayacFragment"
+            app:destination="@id/sayacFragment" />
+        <action
+            android:id="@+id/action_girisFragment_to_ayarlarFragment"
+            app:destination="@id/ayarlarFragment" />
+        <argument
+            android:name="switch1"
+            app:argType="boolean"
+            android:defaultValue="false"/>
+        <argument
+            android:name="switch2"
+            app:argType="boolean"
+            android:defaultValue="false"/>
+        <argument
+            android:name="switch3"
+            app:argType="boolean"
+            android:defaultValue="false"/>
+    </fragment>
+    <fragment
+        android:id="@+id/kronometreFragment"
+        android:name="com.example.derscalisma.view.kronometreFragment"
+        android:label="fragment_kronometre"
+        tools:layout="@layout/fragment_kronometre" />
+    <fragment
+        android:id="@+id/sayacFragment"
+        android:name="com.example.derscalisma.view.sayacFragment"
+        android:label="fragment_sayac"
+        tools:layout="@layout/fragment_sayac" />
+    <fragment
+        android:id="@+id/ayarlarFragment"
+        android:name="com.example.derscalisma.view.AyarlarFragment"
+        android:label="fragment_ayarlar"
+        tools:layout="@layout/fragment_ayarlar" >
+        <action
+            android:id="@+id/action_ayarlarFragment_to_girisFragment"
+            app:destination="@id/girisFragment" />
+    </fragment>
+
+</navigation>

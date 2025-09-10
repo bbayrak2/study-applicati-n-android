@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ProgramFragment">
+
+    <ImageView
+        android:onClick="gorselSec"
+        android:id="@+id/imageView"
+        android:layout_width="381dp"
+        android:layout_height="314dp"
+        android:src="@drawable/fefe"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.565" />
+
+    <EditText
+        android:id="@+id/isimText"
+        android:layout_width="0dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="60dp"
+        android:ems="10"
+        android:hint="Başlık giriniz"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+    <LinearLayout
+        android:layout_width="312dp"
+        android:layout_height="88dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.44">
+        <Button
+            android:onClick="kaydet"
+            android:id="@+id/kaydetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Kaydet"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="613dp" />
+
+        <Button
+            android:onClick="sil"
+            android:id="@+id/silButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sil"
+            tools:layout_editor_absoluteX="236dp"
+            tools:layout_editor_absoluteY="616dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
