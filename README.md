@@ -1,2 +1,2 @@
 # study-applicati-n-android
-Etütlerimde kullanmak üzere geliştirdiğim kotlin projem
+Etütlerimde kullanmak üzere geliştirdiğim kotlin projem.
