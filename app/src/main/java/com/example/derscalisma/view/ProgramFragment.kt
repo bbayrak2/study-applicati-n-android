@@ -79,10 +79,18 @@ class ProgramFragment : Fragment() {
                 //yeni program eklenecek
                 binding.silButton.isEnabled = false
                 binding.kaydetButton.isEnabled = true
+<<<<<<< HEAD
+=======
+                binding.imageView.setOnClickListener { gorselSec(view) }
+>>>>>>> 6eee4aa (ikinci)
                 binding.isimText.setText("")
             } else {
                 binding.silButton.isEnabled = true
                 binding.kaydetButton.isEnabled = false
+<<<<<<< HEAD
+=======
+                binding.imageView.setOnClickListener { x() }
+>>>>>>> 6eee4aa (ikinci)
                 //eski program gösteriliyor
                 val id = ProgramFragmentArgs.fromBundle(it).id
 
@@ -316,7 +324,11 @@ class ProgramFragment : Fragment() {
 
         return Bitmap.createScaledBitmap(kullanicininSectigiBitmap, width, height, true)
     }
+<<<<<<< HEAD
 
+=======
+    fun x(){}
+>>>>>>> 6eee4aa (ikinci)
 
     override fun onDestroyView() {
         super.onDestroyView()
